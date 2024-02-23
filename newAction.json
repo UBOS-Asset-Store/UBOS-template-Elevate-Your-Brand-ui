@@ -10,7 +10,7 @@
             "datasource": {
                 "name": "DEFAULT_REST_DATASOURCE",
                 "datasourceConfiguration": {
-                    "url": "https://brand-nr-65a79fff4632651100000001.ubos.tech"
+                    "url": "{{main.env.NODERED}}/getAdvice"
                 },
                 "invalids": [],
                 "isValid": true,
@@ -20,7 +20,7 @@
             "executeOnLoad": false,
             "pageId": "home",
             "actionConfiguration": {
-                "timeoutInMillisecond": 10000,
+                "timeoutInMillisecond": "30000",
                 "encodeParamsToggle": true,
                 "httpMethod": "POST",
                 "headers": [
@@ -39,26 +39,31 @@
                         "value": true
                     }
                 ],
-                "path": "/getAdvice",
+                "path": "",
                 "body": "{\n\t\n\t\"openAIKey\": {{JSON.stringify(key_input.text)}},\n\t\"model\": {{JSON.stringify(model_select.selectedOptionValue)}},\n\t\"url\": {{JSON.stringify(url_input.text)}}\n\t\n}"
             },
             "dynamicBindingPathList": [
                 {
                     "key": "body"
+                },
+                {
+                    "key": "datasourceUrl"
                 }
             ],
             "isValid": true,
             "invalids": [],
             "jsonPathKeys": [
+                "main.env.NODERED",
                 "JSON.stringify(key_input.text)",
                 "JSON.stringify(model_select.selectedOptionValue)",
-                "JSON.stringify(url_input.text)"
+                "JSON.stringify(url_input.text)",
+                "main.env.NODERED,2024-01-30T13:55:02.785Z,2024-02-23T13:55:26.736Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.NODERED,2024-01-30T13:55:02.785Z,2024-02-23T13:55:29.025Z,read:actions,manage:actions,execute:actions,DEFAULT_REST_DATASOURCE,{{main.env.NODERED"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-01-30T13:55:02.785Z",
-        "updatedAt": "2024-02-23T10:53:54.910Z",
+        "updatedAt": "2024-02-23T13:55:57.477Z",
         "deleted": false,
         "policies": [
             {

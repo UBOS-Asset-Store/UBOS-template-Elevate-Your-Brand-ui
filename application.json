@@ -38,8 +38,9 @@
         }
     ],
     "global_setting": {
-        "title": "Know Your Target Audience",
-        "css": "${env.get(\"NODERED\")}/css"
+        "title": "Elevate Your Brand",
+        "css": "${env.get(\"NODERED\")}/css",
+        "favicon": "https://ubos.tech/wp-content/uploads/2023/02/favicon-32x32-1.png"
     },
     "settings_data": {
         "httpIns": [
